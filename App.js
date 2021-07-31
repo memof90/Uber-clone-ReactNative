@@ -5,20 +5,16 @@ import { StyleSheet, Text, View } from 'react-native';
 // 1)  setup redux 
 // Redux 
 import { Provider } from 'react-redux'
+import { store } from './redux/store';
+// SCREENS
+import HomeScreen from './src/Screens/HomeScreen';
 
 export default function App() {
   return (
-    // <Provider store={}>
-    // <View style={styles.container}>
-    //   <Text>Lest build Uber Clone</Text>
-    //   <StatusBar style="auto" />
-    // </View>
-    // </Provider>
-    <View style={styles.container}>
-      <Text>Lest build Uber Clone</Text>
-      <StatusBar style="auto" />
-    </View>
-
+    <Provider store={store}>
+   <HomeScreen />
+    </Provider>
+  
   );
 }
 
