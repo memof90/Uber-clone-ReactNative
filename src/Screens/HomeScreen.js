@@ -4,6 +4,7 @@ import { View, Text, StyleSheet, SafeAreaView, Image } from 'react-native';
 
 // Tailiwind
 import tw from 'tailwind-react-native-classnames';
+import NavOptions from '../Components/NavOptions';
 
 // create a component
 const HomeScreen = () => {
@@ -20,6 +21,8 @@ const HomeScreen = () => {
                         uri: "https://links.papareact.com/gzs"
                     }}
                 />
+                {/* Navegation */}
+                <NavOptions />
             </View>
         </SafeAreaView>
     );
