@@ -1,6 +1,9 @@
 //import liraries
 import React  from 'react';
 import { View, Text, FlatList, TouchableOpacity, Image } from 'react-native';
+// REACT NATIVE ELEMENTS ICON
+import { Icon } from 'react-native-elements';
+// TAILWIND
 import tw from 'tailwind-react-native-classnames';
 
 // data
@@ -42,6 +45,10 @@ const NavOptions = () => {
                             }}
                         />
                         <Text style={tw `mt-2 text-lg  font-semibold`}>{item.title}</Text>
+                        <Icon 
+                            style={tw `p-2 bg-black rounded-full w-10 mt-4`}
+                            name="arrowright" color="white" type="antdesign"
+                        />
                     </View>
                 </TouchableOpacity>
             )}   
