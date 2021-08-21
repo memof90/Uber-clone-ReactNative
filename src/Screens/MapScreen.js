@@ -8,6 +8,7 @@ import tw from 'tailwind-react-native-classnames';
 // Components
 import Map from '../Components/Map/Map';
 import NavigateCard from '../Components/cardNavigate/NavigateCard';
+import RideOptionsCards from '../Components/cardNavigate/RideOptionsCards';
 
 
 // create a component
@@ -26,7 +27,10 @@ const MapScreen = () => {
                 component={NavigateCard} 
                 options={{headerShown: false}}
                 />
-
+                <Stack.Screen name="RideOptionsCards" 
+                component={RideOptionsCards} 
+                options={{headerShown: false}}
+                />
                 </Stack.Navigator>
             </View>
         </View>
