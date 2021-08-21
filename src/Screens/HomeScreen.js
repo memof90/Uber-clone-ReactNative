@@ -4,6 +4,7 @@ import { View, Text, StyleSheet, SafeAreaView, Image } from 'react-native';
 
 // Tailiwind
 import tw from 'tailwind-react-native-classnames';
+// NavOptions
 import NavOptions from '../Components/NavOptions';
 
 // Google places autoComplete

@@ -7,11 +7,12 @@ import tw from 'tailwind-react-native-classnames';
 // Components
 import Map from '../Components/Map/Map';
 
+
 // create a component
 const MapScreen = () => {
     return (
-        <View style={styles.container}>
-            <View style={tw `h-1/2`}>
+        <View>
+            <View style={tw `h-2/3`}>
                 <Map />
             </View>
             <View style={tw `h-1`}></View>
@@ -20,13 +21,7 @@ const MapScreen = () => {
 };
 
 // define your styles
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-});
+const styles = StyleSheet.create({});
 
 //make this component available to the app
 export default MapScreen;
