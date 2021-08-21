@@ -37,6 +37,18 @@ const HomeScreen = () => {
                                 fontSize: 18
                             }
                         }}
+                       onPress={(data, details = null) => {
+                            console.log(data);
+                            console.log(details);
+                       }}
+                       fetchDetails={true}
+                       minLength={2}
+                       enablePoweredByContainer={false}
+                       query={{
+                           key: GOOGLE_MAPS_APIKEY,
+                           language: "en",
+                       }}
+                       onFail={error => console.error(error)}
                        nearbyPlacesAPI="GooglePlacesSearch"
                        debounce={400} 
                     />
@@ -50,13 +62,13 @@ const HomeScreen = () => {
 };
 
 // define your styles
-const styles = StyleSheet.create({
-    // container: {
-    //     flex: 1,
-    //     justifyContent: 'center',
-    //     alignItems: 'center',
-    // },
-});
+// const styles = StyleSheet.create({
+//     // container: {
+//     //     flex: 1,
+//     //     justifyContent: 'center',
+//     //     alignItems: 'center',
+//     // },
+// });
 
 //make this component available to the app
 export default HomeScreen;
