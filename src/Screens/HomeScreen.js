@@ -11,9 +11,18 @@ import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplet
 
 // import GoogleMaps apiKey
 import { GOOGLE_MAPS_APIKEY } from '@env';
+// REDUX
+import { useDispatch } from 'react-redux';
+import { setDestination, setOrigin } from '../../redux/slices/navSlice';
+
+
 
 // create a component
 const HomeScreen = () => { 
+
+    // Redux setUp
+    const dispatch = useDispatch();
+
     return (
         <SafeAreaView style={tw `bg-white h-full`}>
             <View style={tw `p-5`}>
@@ -38,9 +47,16 @@ const HomeScreen = () => {
                             }
                         }}
                        onPress={(data, details = null) => {
-                            console.log(data);
-                            console.log(details);
+                        //    dispatch Actions to store with redux
+                            dispatch(setOrigin({
+                                location: details.geometry.location,
+                                description: data.description
+                            }))
+
+                            // define destination
+                            dispatch(setDestination(null))
                        }}
+                       returnKeyType={"search"}
                        fetchDetails={true}
                        minLength={2}
                        enablePoweredByContainer={false}
