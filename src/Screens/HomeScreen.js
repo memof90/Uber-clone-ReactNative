@@ -7,7 +7,7 @@ import tw from 'tailwind-react-native-classnames';
 import NavOptions from '../Components/NavOptions';
 
 // create a component
-const HomeScreen = () => {
+const HomeScreen = () => { 
     return (
         <SafeAreaView style={tw `bg-white h-full`}>
             <View style={tw `p-5`}>
