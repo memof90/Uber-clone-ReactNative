@@ -16,6 +16,7 @@ import { GOOGLE_MAPS_APIKEY } from '@env';
 // REDUX
 import { useDispatch } from 'react-redux';
 import { setDestination } from '../../../redux/slices/navSlice';
+// Navegation
 import { useNavigation } from '@react-navigation/native';
 // Components
 import NavFavorites from '../NavFavorites';
