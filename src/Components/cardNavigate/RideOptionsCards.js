@@ -49,7 +49,9 @@ const RideOptionsCards = () => {
             data={data}
             keyExtractor={item => item.id}
             renderItem={({item : {id,title,multipier,image}, item}) => (
-                <TouchableOpacity>
+                <TouchableOpacity
+                    style={tw `flex-row justify-between items-center px-10`}
+                >
                     <Image 
                         style={{
                             width: 100,
@@ -58,6 +60,10 @@ const RideOptionsCards = () => {
                         }}
                         source={{ uri: image }}
                     />
+                    <View>
+                        <Text>{title}</Text>
+                        <Text>Travel time...</Text>
+                    </View>
                 </TouchableOpacity>
             )}
         />
