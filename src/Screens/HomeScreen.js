@@ -2,11 +2,12 @@
 import React from 'react';
 import { View, Text, StyleSheet, SafeAreaView, Image } from 'react-native';
 
+// Components
+import NavOptions from '../Components/NavOptions';
+import NavFavorites from '../Components/NavFavorites';
+
 // Tailiwind
 import tw from 'tailwind-react-native-classnames';
-// NavOptions
-import NavOptions from '../Components/NavOptions';
-
 // Google places autoComplete
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 
@@ -73,6 +74,7 @@ const HomeScreen = () => {
 
                 {/* Navegation */}
                 <NavOptions />
+                <NavFavorites />
             </View>
         </SafeAreaView>
     );
