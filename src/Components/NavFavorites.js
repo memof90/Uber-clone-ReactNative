@@ -31,11 +31,13 @@ const NavFavorites = () => {
         <FlatList 
             data={data}
             keyExtractor={item => item.id}
-            renderItem={({item}) => (
-                <TouchableOpacity>
+            renderItem={({item : {location, destination, icon}}) => (
+                <TouchableOpacity
+                style={tw `flex-row items-center p-5`}
+                >
                     <Icon 
                         style={tw `mr-4 rounded-full bg-gray-300 p-3`}
-                        name={item.icon}
+                        name={icon}
                         type="ionicon"
                         color="#fff"
                         size={18}
