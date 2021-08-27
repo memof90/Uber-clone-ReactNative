@@ -3,9 +3,15 @@ import { StyleSheet, Text, View, Dimensions } from 'react-native'
 
 // Maps
 import MapView, { Marker } from 'react-native-maps';
+// Maps  View directions
+import MapViewDirections from 'react-native-maps-directions';
+
 // REDUX
 import { useSelector } from 'react-redux';
-import { selectOrigin } from '../../../redux/slices/navSlice';
+import { selectDestination, selectOrigin } from '../../../redux/slices/navSlice';
+
+// import GoogleMaps apiKey
+import { GOOGLE_MAPS_APIKEY } from '@env';
 
 // Tailiwind
 import tw from 'tailwind-react-native-classnames';
@@ -13,6 +19,7 @@ import tw from 'tailwind-react-native-classnames';
 const Map = () => {
 
     const origin = useSelector(selectOrigin);
+    const destination = useSelector(selectDestination);
     return (
         <MapView 
         style={tw `flex-1`}
@@ -24,6 +31,15 @@ const Map = () => {
          longitudeDelta: 0.005,
         }}
          >
+
+            {origin?.destination && (
+                <MapViewDirections 
+                    origin={origin.description}
+                    destination={destination.description}
+                    apikey={GOOGLE_MAPS_APIKEY}
+                />
+            )}
+
              {origin?.location && (
                  <Marker 
                      coordinate={{
