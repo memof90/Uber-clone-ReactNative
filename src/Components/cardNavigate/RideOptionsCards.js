@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { View, Text, SafeAreaView,TouchableOpacity, FlatList, Image } from 'react-native';
 
 // REACT NATIVE ELEMENTS ICON
@@ -11,6 +11,9 @@ import { useNavigation } from '@react-navigation/native';
 import tw from 'tailwind-react-native-classnames';
 
 const RideOptionsCards = () => {
+
+    // Setup select ride
+    const [selected, setSelected] = useState(null);
      // SetUp Navegation
      const navigation = useNavigation();
 
@@ -50,7 +53,8 @@ const RideOptionsCards = () => {
             keyExtractor={item => item.id}
             renderItem={({item : {id,title,multipier,image}, item}) => (
                 <TouchableOpacity
-                    style={tw `flex-row justify-between items-center px-10`}
+                    style={tw `flex-row justify-between items-center px-10 ${id === selected?.id && "bg-gray-200"}`}
+                    onPress={() => setSelected(item)}
                 >
                     <Image 
                         style={{
