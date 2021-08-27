@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import { StyleSheet, Text, View, Dimensions } from 'react-native'
 
 // Maps
@@ -18,11 +18,24 @@ import tw from 'tailwind-react-native-classnames';
 
 const Map = () => {
 
+    // SetUp Origin
     const origin = useSelector(selectOrigin);
+    // Setup Destination
     const destination = useSelector(selectDestination);
+    //  setup referencie to map
+    const mapRef = useRef(null);
+
+// setUp refresh Map to only draw map when the user introduce origin into map and not re render component efificently to render component
+    useEffect(() => {
+        if (!origin || !destination) return;
+        // Zoom & fit to markers
+        mapRef.current.fitToSuppliedMarkers(['origin', 'destination'])
+    }, [origin, destination])
+
     return (
         <MapView 
         style={tw `flex-1`}
+        ref={mapRef}
         mapType="mutedStandard"
         initialRegion={{
          latitude: origin.location.lat,
@@ -51,6 +64,17 @@ const Map = () => {
                      title="Origin"
                      description={origin.description}
                      identifier="origin"
+                 />
+             )}
+             {destination?.location && (
+                 <Marker 
+                     coordinate={{
+                        latitude: destination.location.lat,
+                        longitude: destination.location.lng,
+                     }}
+                     title="Destination"
+                     description={destination.description}
+                     identifier="destination"
                  />
              )}
          </MapView>
