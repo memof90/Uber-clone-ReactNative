@@ -49,6 +49,7 @@ const RideOptionsCards = () => {
             </TouchableOpacity>
             <Text style={tw `text-center py-5 text-xl`}>Select a Ride</Text>
         <FlatList 
+            style={tw `-mt-5`}
             data={data}
             keyExtractor={item => item.id}
             renderItem={({item : {id,title,multipier,image}, item}) => (
@@ -72,6 +73,16 @@ const RideOptionsCards = () => {
                 </TouchableOpacity>
             )}
         />
+        </View>
+        <View>
+            <TouchableOpacity 
+            style={tw `bg-black py-3 ml-3 mr-3 mt-1 rounded-full
+            ${!selected && "bg-gray-300"}` 
+            }
+            disabled={!selected}
+            >
+                <Text style={tw `text-center text-white text-xl`}>Choose {selected?.title}</Text>
+            </TouchableOpacity>
         </View>
         </SafeAreaView>
     )
