@@ -7,8 +7,8 @@ import MapView, { Marker } from 'react-native-maps';
 import MapViewDirections from 'react-native-maps-directions';
 
 // REDUX
-import { useSelector } from 'react-redux';
-import { selectDestination, selectOrigin } from '../../../redux/slices/navSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectDestination, selectOrigin, setTravelTimeInformation } from '../../../redux/slices/navSlice';
 
 // import GoogleMaps apiKey
 import { GOOGLE_MAPS_APIKEY } from '@env';
@@ -24,6 +24,8 @@ const Map = () => {
     const destination = useSelector(selectDestination);
     //  setup referencie to map
     const mapRef = useRef(null);
+    // setup travel time to save redux
+    const dispatch = useDispatch();
 
 // setUp refresh Map to only draw map when the user introduce origin into map and not re render component efificently to render component
     useEffect(() => {
@@ -43,7 +45,45 @@ const Map = () => {
             fetch(URL)
             .then(res => res.json())
             .then(data => {
+                // see the data
                 console.log(data);
+                // save Data to Redux 
+                dispatch(setTravelTimeInformation(data.rows[0].elements[0]));
+                // Example data
+                                // "rows": Array [
+                //     Object {
+                //       "elements": Array [
+                //         Object {
+                //           "distance": Object {
+                //             "text": "3.6 mi",
+                //             "value": 5749,
+                //           },
+                //           "duration": Object {
+                //             "text": "14 mins",
+                //             "value": 857,
+                //           },
+                //           "status": "OK",
+                //         },
+                //       ],
+                //     },
+                //     Object {
+                //       "elements": Array [
+                //         Object {
+                //           "distance": Object {
+                //             "text": "1.3 mi",
+                //             "value": 2072,
+                //           },
+                //           "duration": Object {
+                //             "text": "4 mins",
+                //             "value": 239,
+                //           },
+                //           "status": "OK",
+                //         },
+                //       ],
+                //     },
+                //   ],
+                //   "status": "OK",
+                // }
             })
         };
         getTravelTime();
