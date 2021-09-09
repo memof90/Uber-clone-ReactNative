@@ -34,6 +34,21 @@ const Map = () => {
         })
     }, [origin, destination])
 
+    // setup calculated the travel time
+    useEffect(() => {
+        if (!origin || !destination) return;
+        const getTravelTime = async () => {
+            // magig URL
+            const URL = `https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=${origin.description}&destinations=${destination.description}&key=${GOOGLE_MAPS_APIKEY}`
+            fetch(URL)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
+        };
+        getTravelTime();
+    },[origin, destination, GOOGLE_MAPS_APIKEY])
+
     return (
         <MapView 
         style={tw `flex-1`}
