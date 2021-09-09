@@ -10,12 +10,19 @@ import { useNavigation } from '@react-navigation/native';
 // Tailiwind
 import tw from 'tailwind-react-native-classnames';
 
+// REDUX
+import { useSelector } from 'react-redux';
+import { selectOTravelTimeInformation } from '../../../redux/slices/navSlice';
+
 const RideOptionsCards = () => {
 
     // Setup select ride
     const [selected, setSelected] = useState(null);
      // SetUp Navegation
      const navigation = useNavigation();
+ 
+    //  Setup pass data to travel Information to view
+    const travelTimeInformation = useSelector(selectOTravelTimeInformation);
 
     //  setUp Rides
     const data = [
@@ -47,7 +54,7 @@ const RideOptionsCards = () => {
             >
                 <Icon type="fontawesome" name="chevron-left" />
             </TouchableOpacity>
-            <Text style={tw `text-center py-5 text-xl`}>Select a Ride</Text>
+            <Text style={tw `text-center py-5 text-xl`}>Select a Ride - {travelTimeInformation?.distance.text}</Text>
         <FlatList 
             style={tw `-mt-5`}
             data={data}
