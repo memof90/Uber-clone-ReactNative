@@ -14,6 +14,9 @@ import tw from 'tailwind-react-native-classnames';
 import { useSelector } from 'react-redux';
 import { selectOTravelTimeInformation } from '../../../redux/slices/navSlice';
 
+// If we have Surge pricing, this goes up
+const SURGE_CHARGE_RATE = 1.5; 
+
 const RideOptionsCards = () => {
 
     // Setup select ride
@@ -76,7 +79,14 @@ const RideOptionsCards = () => {
                         <Text style={tw `text-xl font-semibold`}>{title}</Text>
                         <Text>{travelTimeInformation?.duration.text} Travel Time</Text>
                     </View>
-                    <Text style={tw `text-xl`}>$99</Text>
+                    <Text style={tw `text-xl`}>
+                        {new Intl.NumberFormat('en-us', {
+                            style: 'currency',
+                            currency: 'USD'
+                        }).format(
+                            (travelTimeInformation?.duration.value * SURGE_CHARGE_RATE * multipier) / 100
+                        )}
+                    </Text>
                 </TouchableOpacity>
             )}
         />
