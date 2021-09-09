@@ -52,12 +52,12 @@ const RideOptionsCards = () => {
         <SafeAreaView style={tw `bg-white flex-grow`}>
         <View>
             <TouchableOpacity 
-            style={tw `absolute top-3 z-50 left-5 p-3 rounded-full`}
+            style={tw `absolute -top-1 z-50 left-5 p-3 rounded-full`}
             onPress={() => navigation.navigate("NavigateCard")}
             >
                 <Icon type="fontawesome" name="chevron-left" />
             </TouchableOpacity>
-            <Text style={tw `text-center py-5 text-xl`}>Select a Ride - {travelTimeInformation?.distance.text}</Text>
+            <Text style={tw `text-center -mt-3 py-5 text-xl`}>Select a Ride - {travelTimeInformation?.distance.text}</Text>
         <FlatList 
             style={tw `-mt-5`}
             data={data}
@@ -91,9 +91,9 @@ const RideOptionsCards = () => {
             )}
         />
         </View>
-        <View>
+        <View style={tw `mt-auto border-t border-gray-200`}>
             <TouchableOpacity 
-            style={tw `bg-black py-3 ml-3 mr-3 mt-1 rounded-full
+            style={tw `bg-black py-3 ml-3 mr-3 mt-3 rounded-full
             ${!selected && "bg-gray-300"}` 
             }
             disabled={!selected}
