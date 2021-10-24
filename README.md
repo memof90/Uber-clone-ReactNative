@@ -29,12 +29,25 @@ https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%
 <table>
   <tr>
     <td>Home Page</td>
-     <td>Home Page</td>
-     <td>Home page</td>
+     <td>Home Page Disable when the user put direction</td>
+     <td>Home page with Google places</td>
   </tr>
   <tr>
     <td><img src="https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%20Native/Captura%20de%20Pantalla%202021-10-23%20a%20la(s)%206.53.17%20p.%C2%A0m..png?raw=true"></td>
     <td><img src="https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%20Native/Captura%20de%20Pantalla%202021-10-23%20a%20la(s)%206.53.26%20p.%C2%A0m..png?raw=true"></td>
     <td><img src="https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%20Native/Captura%20de%20Pantalla%202021-10-23%20a%20la(s)%206.53.52%20p.%C2%A0m..png?raw=true" ></td>
+  </tr>
+ </table>
+ 
+ <table>
+  <tr>
+    <td>Detail Page </td>
+     <td>Detail Page</td>
+     <td>Detail Page</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%20Native/Captura%20de%20Pantalla%202021-10-23%20a%20la(s)%206.54.02%20p.%C2%A0m..png?raw=true"></td>
+    <td><img src="https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%20Native/Captura%20de%20Pantalla%202021-10-23%20a%20la(s)%206.54.26%20p.%C2%A0m..png?raw=true"></td>
+    <td><img src="https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%20Native/Captura%20de%20Pantalla%202021-10-23%20a%20la(s)%206.54.54%20p.%C2%A0m..png?raw=true" ></td>
   </tr>
  </table>
