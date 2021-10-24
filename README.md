@@ -60,7 +60,7 @@ https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%
      <td>Map Page</td>
   </tr>
   <tr>
-    <td><img src=" https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%20Native/Captura%20de%20Pantalla%202021-10-23%20a%20la(s)%206.56.37%20p.%C2%A0m..png?raw=true"></td>
+    <td><img src="https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%20Native/Captura%20de%20Pantalla%202021-10-23%20a%20la(s)%206.56.37%20p.%C2%A0m..png?raw=true"></td>
     <td><img src="https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%20Native/Captura%20de%20Pantalla%202021-10-23%20a%20la(s)%206.55.27%20p.%C2%A0m..png?raw=true"></td>
     <td><img src="https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%20Native/Captura%20de%20Pantalla%202021-10-23%20a%20la(s)%206.55.08%20p.%C2%A0m..png?raw=true" ></td>
   </tr>
