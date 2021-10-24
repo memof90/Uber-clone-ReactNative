@@ -1,17 +1,6 @@
 # Uber-clone-ReactNative
 this is a Uber clone with react Native
 
-https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%20Native/Simulator%20Screen%20Recording%20-%20iPhone%2013%20Pro%20-%202021-10-23%20at%2018.58.40.gif?raw=true
-https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%20Native/Captura%20de%20Pantalla%202021-10-23%20a%20la(s)%206.56.37%20p.%C2%A0m..png?raw=true
-https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%20Native/Captura%20de%20Pantalla%202021-10-23%20a%20la(s)%206.55.27%20p.%C2%A0m..png?raw=true
-https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%20Native/Captura%20de%20Pantalla%202021-10-23%20a%20la(s)%206.55.08%20p.%C2%A0m..png?raw=true
-https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%20Native/Captura%20de%20Pantalla%202021-10-23%20a%20la(s)%206.54.54%20p.%C2%A0m..png?raw=true
-https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%20Native/Captura%20de%20Pantalla%202021-10-23%20a%20la(s)%206.54.26%20p.%C2%A0m..png?raw=true
-https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%20Native/Captura%20de%20Pantalla%202021-10-23%20a%20la(s)%206.54.02%20p.%C2%A0m..png?raw=true
-https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%20Native/Captura%20de%20Pantalla%202021-10-23%20a%20la(s)%206.53.52%20p.%C2%A0m..png?raw=true
-https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%20Native/Captura%20de%20Pantalla%202021-10-23%20a%20la(s)%206.53.26%20p.%C2%A0m..png?raw=true
-https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%20Native/Captura%20de%20Pantalla%202021-10-23%20a%20la(s)%206.53.17%20p.%C2%A0m..png?raw=true
-
 ## KeyPoints 
 
 - 👉  Use Tailwind CSS with RN for awesome styling!
