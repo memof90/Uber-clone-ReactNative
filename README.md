@@ -55,7 +55,7 @@ https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%
  
   <table>
   <tr>
-    <td>Detail Page </td>
+    <td>Redux State</td>
      <td>Map Page</td>
      <td>Map Page</td>
   </tr>
@@ -65,5 +65,16 @@ https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%
     <td><img src="https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%20Native/Captura%20de%20Pantalla%202021-10-23%20a%20la(s)%206.55.08%20p.%C2%A0m..png?raw=true" ></td>
   </tr>
  </table>
+ 
+ 
+   <table>
+  <tr>
+    <td>Demo</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/memof90/screenProjects/blob/master/Uber-Clone%20with%20React%20Native/Simulator%20Screen%20Recording%20-%20iPhone%2013%20Pro%20-%202021-10-23%20at%2018.58.40.gif?raw=true"></td>
+  </tr>
+ </table>
+ 
  
 
